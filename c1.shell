@@ -1,0 +1,35 @@
+#Chapter 1 : Shell something out
+
+# [1.1]Printing in the terminal
+
+# We will receive a formatted output
+# %-5s can be described as a string substitution with left alignment
+# with width equal to 5
+# %-4.2f, where .2 speci es rounding off to two decimal places. 
+
+printf  "%-5s %-10s %-4s\n" No Name  Mark
+printf  "%-5s %-10s %-4.2f\n" 1 Sarath 80.3456
+printf  "%-5s %-10s %-4.2f\n" 2 James 90.9989
+printf  "%-5s %-10s %-4.2f\n" 3 Jeff 77.564
+
+# [1.2]variables and environment variables
+
+var="value"  #Assignment of value to variable var.
+echo $var
+echo ${var}
+fruit=grapefruit
+count=5
+echo "We have $count ${fruit}(s)"
+
+#Finding the length of a string
+echo ${#fruit}	# 10
+
+# Identifying the current shell
+
+echo $SHELL     #/bin/bash
+echo $0			#/bin/bash
+
+# UID is an important environment variable that can be used to check 
+# whether the current script has been run as a root user or regular users
+# The UID value for the root user is 0
+
